@@ -10,12 +10,12 @@
 
 @implementation BEPiDEmpresa
 
-- (void) setFuncionarios: (NSArray*) funcionarios {
-    _funcionarios = [[NSArray alloc] initWithArray:funcionarios];
+- (void) setSetores: (NSArray*) setores {
+    _setores = [[NSArray alloc] initWithArray:setores];
 }
 
-- (NSArray*) funcionarios {
-    return [[NSArray alloc] initWithArray:_funcionarios];
+- (NSArray*) setores {
+    return [[NSArray alloc] initWithArray:_setores];
 }
 
 - (void) setAnoAtual: (int) anoAtual {
@@ -28,7 +28,21 @@
 
 - (NSUInteger) numeroDeFuncionarios
 {
-    return [[NSMutableArray arrayWithArray:_funcionarios] count];
+    NSUInteger count = 0;
+    for (BEPiDSetor *setor in [NSMutableArray arrayWithArray:_setores]) {
+        count += [[setor funcionarios] count];
+    }
+    return count;
+}
+
+- (void) demitirFuncionarios
+{
+    for (BEPiDSetor *setor in [NSArray arrayWithArray:_setores]) {
+        NSArray *funcionarios = [setor funcionarios];
+        for (BEPiDFuncionario *funcionario in funcionarios) {
+            <#statements#>
+        }
+    }
 }
 
 @end

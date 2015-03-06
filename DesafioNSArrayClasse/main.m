@@ -35,11 +35,20 @@ int main(int argc, const char * argv[]) {
                           @"Lucas",
                           nil];
         
-        for (NSUInteger i = 0; i < 10; i++) {
+        NSArray *salarios = [NSArray arrayWithObjects:
+                             [NSNumber numberWithFloat:100.00f],
+                             [NSNumber numberWithFloat:1000.00f],
+                             [NSNumber numberWithFloat:3000.00f],
+                             [NSNumber numberWithFloat:8000.00f],
+                             [NSNumber numberWithFloat:12000.00f],
+                             [NSNumber numberWithFloat:17000.00f],
+                             nil];
+        
+        for (NSUInteger i = 0; i < 30; i++) {
             BEPiDFuncionario *funcionario = [[BEPiDFuncionario alloc] init];
             [funcionario setId:i];
-            [funcionario setNome:[nomes objectAtIndex:i]];
-            [funcionario setSalario:1625.35*(i+1)];
+            [funcionario setNome:[nomes objectAtIndex:(i%10)]];
+            [funcionario setSalario:[(NSNumber*)[salarios objectAtIndex:(i%6)] floatValue]];
             [lista addObject:funcionario];
         }
         
@@ -53,6 +62,16 @@ int main(int argc, const char * argv[]) {
         print_func(lista,7);
         print_func(lista,8);
         print_func(lista,9);
+        print_func(lista,10);
+        print_func(lista,11);
+        print_func(lista,12);
+        print_func(lista,13);
+        print_func(lista,14);
+        print_func(lista,15);
+        print_func(lista,16);
+        print_func(lista,17);
+        print_func(lista,18);
+        print_func(lista,19);
         
         assign_cars(lista);
         
@@ -63,8 +82,33 @@ int main(int argc, const char * argv[]) {
         
         presentear(lista, [empresa anoAtual]);
         
-        [empresa setFuncionarios:(NSArray*)lista];
+        NSMutableArray *setores = [[NSMutableArray alloc] init];
         
+        BEPiDSetor *setor = [[BEPiDSetor alloc] init];
+        [setor setSetorId:0];
+        [setor setNome:@"RH"];
+        [setor setFuncionarios:[NSMutableArray arrayWithObjects:[lista subarrayWithRange:NSMakeRange(0, 6)], nil]];
+        [setores addObject:setor];
+        
+        setor = [[BEPiDSetor alloc] init];
+        [setor setSetorId:1];
+        [setor setNome:@"Operacional"];
+        [setor setFuncionarios:[NSMutableArray arrayWithObjects:[lista subarrayWithRange:NSMakeRange(6, 6)], nil]];
+        [setores addObject:setor];
+        
+        setor = [[BEPiDSetor alloc] init];
+        [setor setSetorId:2];
+        [setor setNome:@"Financeiro"];
+        [setor setFuncionarios:[NSMutableArray arrayWithObjects:[lista subarrayWithRange:NSMakeRange(12, 6)], nil]];
+        [setores addObject:setor];
+        
+        setor = [[BEPiDSetor alloc] init];
+        [setor setSetorId:1];
+        [setor setNome:@"Herdeiros"];
+        [setor setFuncionarios:[NSMutableArray arrayWithObjects:[lista subarrayWithRange:NSMakeRange(18, 6)], nil]];
+        [setores addObject:setor];
+        
+        [empresa setSetores:setores];
     }
     return 0;
 }
@@ -126,12 +170,12 @@ void assign_cars(NSArray *employees) {
                       @"Lucas",
                       nil];
     
-    for (NSUInteger i = 0; i < 10; i++) {
+    for (NSUInteger i = 0; i < [employees count]; i++) {
         BEPiDCarro *carro = [[BEPiDCarro alloc] init];
-        [carro setMarca:[marcas objectAtIndex:i]];
-        [carro setModelo:[modelos objectAtIndex:i]];
-        [carro setPlaca:[placas objectAtIndex:i]];
-        [carro setCor:[cores objectAtIndex:i]];
+        [carro setMarca:[marcas objectAtIndex:(i%10)]];
+        [carro setModelo:[modelos objectAtIndex:(i%10)]];
+        [carro setPlaca:[placas objectAtIndex:(i%10)]];
+        [carro setCor:[cores objectAtIndex:(i%10)]];
         [carro setAno:[NSNumber numberWithInt:2010]];
         
         BEPiDFuncionario *funcionario = (BEPiDFuncionario*)[employees objectAtIndex:i];

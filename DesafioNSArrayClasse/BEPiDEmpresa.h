@@ -11,14 +11,15 @@
 #import "BEPiDSetor.h"
 
 @interface BEPiDEmpresa : NSObject {
-    NSArray *_funcionarios;
+    NSArray *_setores;
     NSNumber *_anoAtual;
 }
 
-- (void) setFuncionarios: (NSArray*) funcionarios;
-- (NSArray*) funcionarios;
+- (void) setSetores: (NSArray*) setores;
+- (NSArray*) setores;
 - (void) setAnoAtual: (int) anoAtual;
 - (NSNumber*) anoAtual;
 - (NSUInteger) numeroDeFuncionarios;
+- (void) demitirFuncionarios;
 
 @end
