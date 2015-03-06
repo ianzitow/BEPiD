@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A915142D1AA8F406008E5E07 /* BEPiDSetor.m in Sources */ = {isa = PBXBuildFile; fileRef = A915142C1AA8F406008E5E07 /* BEPiDSetor.m */; };
 		A95F2B681AA4DB7C0056FEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F2B671AA4DB7C0056FEBE /* main.m */; };
+		A95F2B701AA4DC2C0056FEBE /* BEPiDFuncionario.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F2B6F1AA4DC2C0056FEBE /* BEPiDFuncionario.m */; };
+		A95F2B731AA4DCD60056FEBE /* BEPiDEmpresa.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F2B721AA4DCD60056FEBE /* BEPiDEmpresa.m */; };
+		A95F2B761AA626800056FEBE /* BEPiDCarro.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F2B751AA626800056FEBE /* BEPiDCarro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A915142B1AA8F406008E5E07 /* BEPiDSetor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPiDSetor.h; sourceTree = "<group>"; };
+		A915142C1AA8F406008E5E07 /* BEPiDSetor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPiDSetor.m; sourceTree = "<group>"; };
 		A95F2B641AA4DB7C0056FEBE /* DesafioNSArrayClasse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesafioNSArrayClasse; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95F2B671AA4DB7C0056FEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A95F2B6E1AA4DC2C0056FEBE /* BEPiDFuncionario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPiDFuncionario.h; sourceTree = "<group>"; };
+		A95F2B6F1AA4DC2C0056FEBE /* BEPiDFuncionario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPiDFuncionario.m; sourceTree = "<group>"; };
+		A95F2B711AA4DCD60056FEBE /* BEPiDEmpresa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPiDEmpresa.h; sourceTree = "<group>"; };
+		A95F2B721AA4DCD60056FEBE /* BEPiDEmpresa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPiDEmpresa.m; sourceTree = "<group>"; };
+		A95F2B741AA626800056FEBE /* BEPiDCarro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPiDCarro.h; sourceTree = "<group>"; };
+		A95F2B751AA626800056FEBE /* BEPiDCarro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPiDCarro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				A95F2B671AA4DB7C0056FEBE /* main.m */,
+				A915142B1AA8F406008E5E07 /* BEPiDSetor.h */,
+				A915142C1AA8F406008E5E07 /* BEPiDSetor.m */,
+				A95F2B741AA626800056FEBE /* BEPiDCarro.h */,
+				A95F2B751AA626800056FEBE /* BEPiDCarro.m */,
+				A95F2B6E1AA4DC2C0056FEBE /* BEPiDFuncionario.h */,
+				A95F2B6F1AA4DC2C0056FEBE /* BEPiDFuncionario.m */,
+				A95F2B711AA4DCD60056FEBE /* BEPiDEmpresa.h */,
+				A95F2B721AA4DCD60056FEBE /* BEPiDEmpresa.m */,
 			);
 			path = DesafioNSArrayClasse;
 			sourceTree = "<group>";
@@ -118,6 +138,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95F2B731AA4DCD60056FEBE /* BEPiDEmpresa.m in Sources */,
+				A915142D1AA8F406008E5E07 /* BEPiDSetor.m in Sources */,
+				A95F2B701AA4DC2C0056FEBE /* BEPiDFuncionario.m in Sources */,
+				A95F2B761AA626800056FEBE /* BEPiDCarro.m in Sources */,
 				A95F2B681AA4DB7C0056FEBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +256,7 @@
 				A95F2B6D1AA4DB7C0056FEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
